@@ -502,6 +502,69 @@ h2 {
 .specialty-card:hover > a {
   transform: translate(2px, -2px);
 }
+.team {
+  background: var(--cream);
+}
+.team .section-heading {
+  align-items: flex-end;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px 22px;
+}
+.doctor-card {
+  min-width: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.55s ease;
+}
+.doctor-card:hover {
+  box-shadow: 0 12px 24px rgba(38, 59, 55, 0.08);
+  transform: translateY(-3px);
+}
+.doctor-photo {
+  aspect-ratio: 0.92;
+  overflow: hidden;
+  background: var(--mint);
+}
+.doctor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.doctor-card:hover .doctor-photo img {
+  transform: scale(1.025);
+}
+.doctor-info {
+  padding: 19px 20px 21px;
+}
+.doctor-info h3 {
+  margin: 0 0 3px;
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+}
+.doctor-info p {
+  margin: 0 0 13px;
+  color: rgba(38, 59, 55, 0.68);
+  font-size: 12px;
+}
+.doctor-info .doctor-bio {
+  margin-bottom: 16px;
+  color: rgba(38, 59, 55, 0.72);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.doctor-info a {
+  color: var(--terracotta);
+  font-size: 11px;
+  font-weight: 700;
+}
 .values {
   background: var(--deep);
   color: #f8f6f1;
@@ -873,6 +936,16 @@ h2 {
   .specialty-card:nth-child(4) {
     border-top: 1px solid var(--line);
   }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 14px;
+  }
+  .doctor-info {
+    padding: 15px;
+  }
+  .doctor-info h3 {
+    font-size: 21px;
+  }
   .values-grid {
     gap: 56px;
   }
@@ -917,6 +990,9 @@ h2 {
   }
   .specialty-card h3 {
     margin-top: 54px;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
   }
   .footer-inner {
     display: flex;
